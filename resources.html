@@ -2,63 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RuralLearn - Study Resources</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Available Resources</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">RuralLearn</a>
-      <div class="collapse navbar-collapse">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="#">RuralLearn</a>
+      <!-- Toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="upload.html">Upload Resource</a></li>
-          <li class="nav-item"><a class="nav-link active" href="resources.html">View Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="upload.html">Upload</a></li>
+          <li class="nav-item"><a class="nav-link active" href="resources.html">Resources</a></li>
         </ul>
-        <button id="logoutBtn" class="btn btn-outline-light btn-sm ms-3" style="display:none;">Logout</button>
       </div>
     </div>
   </nav>
 
-  <main class="container mt-4">
-    <h2>Available Study Resources</h2>
-
-    <div class="row mb-4">
-      <div class="col-md-4">
-        <input
-          type="text"
-          id="searchInput"
-          class="form-control"
-          placeholder="Search by title..."
-          autocomplete="off"
-        />
-      </div>
-      <div class="col-md-4">
-        <select id="subjectFilter" class="form-select">
-          <option value="">All Subjects</option>
-          <option value="Mathematics">Mathematics</option>
-          <option value="Science">Science</option>
-          <option value="English">English</option>
-          <option value="Life Orientation">Life Orientation</option>
-          <option value="Geography">Geography</option>
-          <option value="History">History</option>
-        </select>
-      </div>
-      <div class="col-md-4">
-        <select id="gradeFilter" class="form-select">
-          <option value="">All Grades</option>
-          <option value="10">Grade 10</option>
-          <option value="11">Grade 11</option>
-          <option value="12">Grade 12</option>
-        </select>
-      </div>
+  <section class="container py-5">
+    <h2>Download Available Resources</h2>
+    <div id="resourceList" class="row mt-4">
+      <!-- JS will populate resources here -->
     </div>
+  </section>
 
-    <ul id="resourceList" class="list-group"></ul>
-  </main>
+  <footer class="bg-success text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2025 RuralLearn</p>
+  </footer>
 
-  <script src="js/auth.js"></script>
   <script src="js/resources.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
