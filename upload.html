@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload Resource - RuralLearn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">RuralLearn</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="upload.html">Upload</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+        <button id="logoutBtn" class="btn btn-outline-light btn-sm ms-3" style="display:none;">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5">
+    <h2>Upload Study Material</h2>
+    <form id="uploadForm" class="mt-4">
+      <div class="mb-3">
+        <label for="title" class="form-label">Resource Title</label>
+        <input type="text" class="form-control" id="title" required />
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <select class="form-select" id="subject" required>
+          <option value="">Choose subject</option>
+          <option>Mathematics</option>
+          <option>Science</option>
+          <option>English</option>
+          <option>Life Orientation</option>
+          <option>Geography</option>
+          <option>History</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="grade" class="form-label">Grade</label>
+        <select class="form-select" id="grade" required>
+          <option value="">Choose grade</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Short Description (optional)</label>
+        <textarea class="form-control" id="description" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="file" class="form-label">Upload File</label>
+        <input type="file" class="form-control" id="file" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/upload.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      protectRoute();
+    });
+  </script>
+</body>
+</html>
